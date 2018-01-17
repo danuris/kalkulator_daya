@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<meta name="author" content="Suckittrees">
+	<title>Horizontal Dropdown Menu dengan CSS3 Suckittrees.com</title>
+<!-- 	<script type="text/javascript" src="fungsi.js"></script> -->
+ </head>
+<body>
+<h1 align="center">Latihan Hybrid</h1>
+<h1 align="center">Perhitungan daya</h1>
+<hr>
+<h3>Kalkulator daya</h3>
+
+Tegangan :&nbsp&nbsp <input type="text" id="V"  onkeyup="sum();" />
+</br>
+Arus :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" id="I"  onkeyup="sum();" />
+</br>
+Daya :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" id="P" />
+</br>
+</br>
+Daya yang dimiliki sebesar 
+
+<script>
+		function sum() {
+				  var edtext1 = document.getElementById('V').value;
+				  var edtext2 = document.getElementById('I').value;
+				  var result = parseInt(edtext1) * parseInt(edtext2);
+				  if (!isNaN(result)) {
+					 document.getElementById('P').value = result;
+				  }
+			}
+	</script>
+
+</body>
+</html>
