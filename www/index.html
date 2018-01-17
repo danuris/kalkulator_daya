@@ -2,8 +2,7 @@
 <html>
 <head>
 	<meta charset='UTF-8'>
-	<meta name="author" content="Suckittrees">
-	<title>Horizontal Dropdown Menu dengan CSS3 Suckittrees.com</title>
+	<title>Aplikasi kalkulator daya</title>
 <!-- 	<script type="text/javascript" src="fungsi.js"></script> -->
  </head>
 <body>
@@ -12,14 +11,14 @@
 <hr>
 <h3>Kalkulator daya</h3>
 
-Tegangan :&nbsp&nbsp <input type="number" id="V"  onkeyup="sum();" />
+Tegangan :&nbsp&nbsp <input type="number" id="V"  onchange="sum();" onkeyup ="sum()" />
 </br>
-Arus :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="number" id="I"  onkeyup="sum();" />
+Arus :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="number" id="I"  onchange="sum();" onkeyup ="sum()"/>
 </br>
 Daya :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="number" id="P" />
 </br>
 </br>
-Daya yang dimiliki sebesar 
+Daya yang dimiliki sebesar <span id="daya"> </span>
 
 <script>
 		function sum() {
@@ -28,6 +27,11 @@ Daya yang dimiliki sebesar
 				  var result = parseInt(edtext1) * parseInt(edtext2);
 				  if (!isNaN(result)) {
 					 document.getElementById('P').value = result;
+					 document.getElementById('daya').innerHTML = result;
+					 if (result > 1000 ) {
+					 alert ("Daya melebihi kapasitas")
+					 }			
+			
 				  }
 			}
 	</script>
